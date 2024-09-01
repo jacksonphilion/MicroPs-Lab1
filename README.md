@@ -1,0 +1,1 @@
+The following files contain the code for checking that the MicroP's board is working properly.
