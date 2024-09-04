@@ -1,3 +1,4 @@
+// Jackson Philion, Sep.2.2024, jphilion@g.hmc.edu. Test code to blink D6 board LED from E155 starter code by Josh Brake
 module top(
 	input 	logic	mcu_blink_in,
 	output 	logic fpga_blink_out, mcu_echo_led
