@@ -1,5 +1,5 @@
 module top(
-	input 	logic	[3:0]   dip,
+	input 	logic	[3:0]   s,
 	output 	logic   [6:0]   seg,
     output  logic   [2:0]   led,
 );
@@ -15,13 +15,13 @@ module top(
         else    counter <= 0;
 		
     // LED Output Logic
-    assign led[0] = dip[1] | dip[0];
-    assign led[1] = dip[3] & dip[2];
+    assign led[0] = s[1] | s[0];
+    assign led[1] = s[3] & s[2];
     assign led[2] = counter[24];
 
     // Segment Logic
     always_comb
-        case (dip)
+        case (s)
             4'x0: seg <= 6'b1111110
             4'x1: seg <= 6'b1001000
             4'x2: seg <= 6'b0111101
